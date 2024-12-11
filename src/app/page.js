@@ -178,10 +178,11 @@ export default function Home() {
   };
 
   return (
-    <main className="grid grid-cols-2 min-h-screen flex-col gap-24 p-24">
-      <section className="flex flex-col gap-5">
+    <main className="grid grid-cols-1 md:grid-cols-2 min-h-screen flex-col gap-10 md:gap-24 p-10 md:p-24">
+      <section className="flex flex-col gap-5 bg-white p-4 rounded-xl shadow-lg">
         <h1 className="text-2xl font-bold">JSON to CSV Converter</h1>
         <input type="file" onChange={handleFileChange} accept=".json" />
+        
         <button className="p-2 bg-slate-600 text-white rounded" onClick={convertToCsv}>
           Convert to CSV
         </button>
@@ -200,7 +201,7 @@ export default function Home() {
         )}
       </section>
 
-      <section className="flex flex-col gap-5">
+      <section className="flex flex-col gap-5 bg-white p-4 rounded-xl shadow-lg">
         <h1 className="text-2xl font-bold">CSV to JSON Converter</h1>
         <input type="file" onChange={handleCSVFileChange} accept=".csv" />
         <button className="p-2 bg-slate-600 text-white rounded" onClick={convertToJSON}>
